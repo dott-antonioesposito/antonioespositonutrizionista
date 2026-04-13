@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="it" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dott. Antonio Esposito - Biologo Nutrizionista</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  .font-heading {
+    font-family: 'Montserrat', serif;
+  }
+
+  .font-body {
+    font-family:'Montserrat', sans-serif
+  }
+</style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f7ff',
+              100: '#e0efff',
+              200: '#b9dfff',
+              300: '#7cc4ff', 
+              400: '#36a5ff',
+              500: '#0c87eb',
+              600: '#0069c9',
+              700: '#0154a3',
+              800: '#064786',
+              900: '#0b3d6f',
+            },
+            surface: '#f8fafc',
+            text: '#1e3a5f',
+            accent: '#0c87eb',
+            secondary: '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>body { box-sizing: border-box;}
+
+ 
+  
+}
+</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body bg-white text-text">
+  <div id="app-wrapper" class="w-full h-full overflow-auto">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-primary-100 transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+
+        <!-- Riga principale -->
+        <div class="flex items-center justify-between">
+
+          <!-- Logo -->
+          <a href="#hero" class="flex items-center">
+            <img src="img/logo.png"
+                 alt="Dott. Antonio Esposito Biologo Nutrizionista"
+                 class="h-12 sm:h-14 w-auto">
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#hero" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']">Home</a>
+            <a href="#chi-sono" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']">Chi sono</a>
+            <a href="#i-servizi" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']">Servizi</a>
+            <a href="#la-visita" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']">La visita</a>
+            <a href="#contatti" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']">Contatti</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn"
+                  class="md:hidden p-2 text-text hover:text-accent transition-colors"
+                  onclick="toggleMobileMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+       <!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="md:hidden mt-4 border-t border-primary-100 overflow-hidden max-h-0 opacity-0 transition-[max-height,opacity] duration-500 ease-in-out">
+  <div class="flex flex-col gap-4 pt-4 pb-4">
+    <a href="#hero" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']" onclick="closeMobileMenu()">Home</a>
+    <a href="#chi-sono" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']" onclick="closeMobileMenu()">Chi sono</a>
+    <a href="#i-servizi" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']" onclick="closeMobileMenu()">Servizi</a>
+    <a href="#la-visita" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']" onclick="closeMobileMenu()">La visita</a>
+    <a href="#contatti" class="text-secondary hover:text-accent transition-colors duration-300 font-medium font-['Merriweather']" onclick="closeMobileMenu()">Contatti</a>
+  </div>
+</div>
+    </nav>
+
+    
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+  <div class="absolute inset-0 overflow-hidden bg-black">
+    <video
+      id="heroVideo"
+      class="absolute inset-0 w-full h-full object-cover bg-black opacity-0 transition-opacity duration-700"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="none"
+      
+    >
+      <source src="video/video.mp4" type="video/mp4">
+      Il tuo browser non supporta il tag video.
+    </video>
+  </div>
+
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/70"></div>
+
+      <!-- Hero content -->
+      <div class="relative z-10 flex flex-col justify-center items-center text-center px-6">
+        <h1 class="text-4xl md:text-4xl font-semibold text-white mb-3 tracking-[0.06em] uppercase font-['Merriweather'] brightness-0 invert">
+          Dott. Antonio Esposito
+        </h1>
+
+        <h2 class="text-[11px] md:text-[14px] text-white font-light tracking-[0.25em] uppercase brightness-0 invert">
+          Biologo Nutrizionista
+        </h2>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-16">
+          <a href="#contatti"
+             class="bg-[#5194bf] hover:bg-[#3f7ea5] text-white px-7 py-3 rounded-xl transition shadow-lg ">
+            Prenota la consulenza
+          </a>
+
+          <a href="#chi-sono"
+             class="border border-white text-white px-7 py-3 rounded-xl hover:bg-white hover:text-[#3f7ea5] transition">
+            Scopri di più
+          </a>
+        </div>
+        <!-- Social links -->
+  <div class="mt-16 flex items-center justify-center gap-5">
+    <a href="https://instagram.com/dr.antonioesposito"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram"
+       class="transition hover:scale-110">
+      <img src="img/logo-instagram.svg" alt="Instagram" class="w-8 h-8 object-contain brightness-0 invert">
+    </a>
+
+    <a href="https://facebook.com/share/1Hezbt2sUy/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook"
+       class="transition hover:scale-110">
+      <img src="img/logo-facebook.svg" alt="Facebook" class="w-8 h-8 object-contain brightness-0 invert">
+    </a>
+
+    <a href="https://linkedin.com/in/antonioesposito22"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn"
+       class="transition hover:scale-110">
+      <img src="img/logo-linkedin.svg" alt="LinkedIn" class="w-8 h-8 object-contain brightness-0 invert">
+    </a>
+  </div>
+
+      </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a id="whatsapp-float"
+       href="https://wa.me/3501370145"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-4 z-50 w-9 h-9 rounded-full flex items-center justify-center shadow-xl transition bg-green-500 hover:bg-green-600">
+      <img src="img/logo-whatsapp.svg"
+           alt="WhatsApp"
+           class="w-6 h-6 object-contain brightness-0 invert">
+    </a>
+
+  </div>
+</body>
+
+
+   
+   <!-- CHI SONO SECTION -->
+<section id="chi-sono" class="py-24 bg-[#E6F0FA] relative">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Titolo centrato -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-accent font-semibold text-4xl tracking-wider uppercase mb-4 font-['Merriweather']">
+        Chi sono
+      </span>
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Layout 50% / 50% -->
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- COLONNA SINISTRA -->
+      <div>
+        <h2 class="mb-1 text-[10px] text-secondary font-medium tracking-[0.20em] uppercase font-['Merriweather']">
+          Biologo Nutrizionista
+        </h2>
+
+        <h3 class="mb-6 text-xl text-gray-600 font-bold tracking-[0.20em] font-['Merriweather']">
+          Dott. Antonio Esposito
+        </h3>
+
+        <p class="text-lg text-secondary leading-relaxed mb-6">
+          Sono il Dott. Antonio Esposito, Biologo Nutrizionista regolarmente iscritto alla <a href="https://www.fnob.it/servizi/elenco-iscritti/" class="font-semibold text-primary-500 hover:underline transition">FNOB n°AA_101749.</a></p>
+          
+       <p class="text-lg text-secondary leading-relaxed mb-6">
+        Ho conseguito la <span class="font-semibold text-gray-600">Laurea Triennale in Scienze Biologiche </span>  e successivamente la <span class="font-semibold text-gray-600">Laurea Magistrale in Scienze
+          dell’Alimentazione e Nutrizione Umana </span> con il massimo dei voti.
+        </p>
+
+        <p class="text-lg text-secondary leading-relaxed mb-6">
+          Durante il mio percorso ho maturato esperienza in <span class="font-semibold text-gray-600">laboratori universitari </span> e ho svolto tirocinio presso
+          un nutrizionista sportivo e triatleta, approfondendo l’applicazione pratica della <span class="font-semibold text-gray-600">nutrizione nello sport.</span>
+        </p>
+
+        <p class="text-lg text-secondary leading-relaxed mb-6">
+          Mi occupo di <span class="font-semibold text-gray-600">nutrizione clinica e sportiva </span>  con un approccio personalizzato, basato sull’ascolto e
+          sulle più recenti evidenze scientifiche. Sono in costante aggiornamento attraverso corsi di formazione
+          in questi ambiti.
+        </p>
+
+        <p class="text-lg text-secondary leading-relaxed mb-6">
+          Il mio obiettivo è accompagnarti in un <span class="font-semibold text-gray-600">cambiamento concreto e duraturo </span>, attraverso strategie
+          nutrizionali chiare, realistiche e costruite su misura per te.
+        </p>
+      </div>
+
+      <!-- COLONNA DESTRA -->
+      <div>
+        <div class="w-full h-auto mb-8">
+          <img src="img/foto-mia.jpg"
+               alt="Dott. Antonio Esposito"
+               class="w-full h-[420px] sm:h-[650px] rounded-2xl shadow-xl object-cover transition duration-300 hover:shadow-2xl">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEZIONE BIOLOGO NUTRIZIONISTA -->
+  <div class="max-w-6xl mx-auto px-6 mt-20">
+
+    <!-- Layout invertito -->
+    <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- COLONNA SINISTRA - IMMAGINE -->
+      <div>
+        <div class="w-full">
+          <img src="img/carosello-4.jpg"
+               alt="Biologo Nutrizionista"
+               class="w-full h-[320px] sm:h-[480px] rounded-2xl shadow-xl object-cover transition duration-300 hover:shadow-2xl">
+        </div>
+      </div>
+
+      <!-- COLONNA DESTRA - TESTO -->
+      <div>
+        <h3 class="mb-6 text-lg text-text font-medium tracking-[0.20em] uppercase font-['Merriweather']">
+          Chi è il Biologo Nutrizionista
+        </h3>
+
+        <p class="text-lg text-secondary leading-relaxed mb-6">
+          Il Biologo Nutrizionista è un <span class="font-semibold text-gray-600">professionista sanitario </span>abilitato alla valutazione dello stato nutrizionale
+          e all’elaborazione di piani alimentari personalizzati per soggetti sani e con patologie accertate dal medico.
+          Opera in autonomia professionale, promuovendo un’alimentazione equilibrata e scientificamente fondata.
+        </p>
+
+        <p class="text-lg text-secondary leading-relaxed mb-8">
+          L’attività del Biologo Nutrizionista si basa sulle più recenti evidenze scientifiche, facendo riferimento ai
+          <span class="font-semibold text-gray-600"> LARN </span>(Livelli di Assunzione di Riferimento di Nutrienti ed energia per la popolazione italiana)</strong>
+          e alle <span class="font-semibold text-gray-600">Linee Guida per una Sana Alimentazione</span>,
+          strumenti fondamentali per garantire equilibrio, adeguatezza e sicurezza nutrizionale.
+        </p>
+
+        <a href="https://sinu.it/2019/12/08/crea-presentate-le-nuove-linee-guida-per-una-sana-alimentazione"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-block text-primary-500 font-semibold hover:underline transition">
+          Approfondisci i LARN e le Linee Guida →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+   <!-- SERVIZI SECTION -->
+<section id="i-servizi" class="py-24 bg-gradient-to-b from-surface to-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header section -->
+    <div class="text-center mb-20">
+      <span class="inline-block text-accent font-semibold text-4xl tracking-wider uppercase mb-4 font-['Merriweather']">
+        Cosa offro
+      </span>
+
+      <h2 class="mb-6 text-[12px] text-secondary font-medium tracking-[0.20em] font-['Merriweather']">
+        Servizi nutrizionali
+      </h2>
+
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Card grid -->
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+      <!-- 1 -->
+      <div class="group bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full flex flex-col">
+        <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-2xl flex items-center justify-center mb-6 text-lg font-bold shadow-md group-hover:scale-105 transition">
+          1
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-text mb-4">
+          Ricomposizione Corporea
+        </h3>
+        <p class="text-secondary leading-relaxed">
+          Percorsi nutrizionali mirati alla riduzione della massa grassa e all’aumento della massa muscolare,
+          attraverso un approccio scientifico personalizzato e sostenibile nel tempo.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="group bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full flex flex-col">
+        <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-2xl flex items-center justify-center mb-6 text-lg font-bold shadow-md group-hover:scale-105 transition">
+          2
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-text mb-4">
+          Nutrizione Sportiva
+        </h3>
+        <p class="text-secondary leading-relaxed">
+          Strategie alimentari specifiche per migliorare performance, recupero e composizione corporea,
+          adattate al tipo di sport e al livello di allenamento.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="group bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full flex flex-col">
+        <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-2xl flex items-center justify-center mb-6 text-lg font-bold shadow-md group-hover:scale-105 transition">
+          3
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-text mb-4">
+          Nutrizione e Patologie Gastrointestinali
+        </h3>
+        <p class="text-secondary leading-relaxed">
+          Supporto nutrizionale in caso di sindrome dell’intestino irritabile, reflusso, gastrite, colite
+          e altre problematiche digestive, con protocolli personalizzati.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="group bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full flex flex-col">
+        <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-2xl flex items-center justify-center mb-6 text-lg font-bold shadow-md group-hover:scale-105 transition">
+          4
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-text mb-4">
+          Nutrizione e Patologie Autoimmuni
+        </h3>
+        <p class="text-secondary leading-relaxed">
+          Piani alimentari studiati per modulare l’infiammazione e supportare il sistema immunitario
+          in presenza di patologie autoimmuni (es. Celiachia).
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="group bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full flex flex-col">
+        <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-2xl flex items-center justify-center mb-6 text-lg font-bold shadow-md group-hover:scale-105 transition">
+          5
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-text mb-4">
+          Nutrizione Pediatrica
+        </h3>
+        <p class="text-secondary leading-relaxed">
+          Educazione alimentare e piani nutrizionali per bambini e adolescenti,
+          per favorire una crescita sana e prevenire squilibri nutrizionali.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="group bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full flex flex-col">
+        <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-2xl flex items-center justify-center mb-6 text-lg font-bold shadow-md group-hover:scale-105 transition">
+          6
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-text mb-4">
+          Nutrizione per le Donne
+        </h3>
+        <p class="text-secondary leading-relaxed">
+          Percorsi nutrizionali dedicati alle diverse fasi della vita femminile:
+          gravidanza, allattamento, menopausa e condizioni patologiche come PCOS, lipedema, linfedema e osteoporosi.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   
+  
+  <!-- LA VISITA SECTION -->
+<section id="la-visita" class="py-28 bg-[#d8eef6]">
+  <div class="w-full mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <span class="inline-block text-accent font-semibold text-4xl tracking-wider uppercase mb-4 font-['Merriweather']">
+        La visita
+      </span>
+
+      <h2 class="mb-6 text-[12px] text-secondary font-medium tracking-[0.20em] font-['Merriweather']">
+        Percorso nutrizionale
+      </h2>
+
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full mt-6 mb-12"></div>
+
+      <div class="max-w-4xl mx-auto px-6 space-y-10">
+
+        <!-- Box 1 -->
+        <div class="bg-white/80 border border-blue-100 rounded-[2rem] px-8 py-10 shadow-md backdrop-blur-sm text-center">
+          <h2 class="font-heading text-2xl font-light text-accent mb-6" style="font-family: 'Merriweather'">
+            Metodo di lavoro
+          </h2>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            Durante la prima visita verrà svolta <span class="font-semibold text-gray-600">un'anamnesi completa </span> che esplora abitudini alimentari, stile di vita,
+            stati fisiologici, patologie croniche, terapie farmacologiche supportate dall'interpretazione di analisi ematochimiche recenti.
+          </p>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            Successivamente verrà svolta <span class="font-semibold text-gray-600">l'analisi antropometrica </span> con misurazione delle circonferenze corporee,
+            plicometria e la <span class="font-semibold text-gray-600"></span>bioimpedenziometria (BIA) </span> per massa magra, massa grassa e acqua corporea.
+          </p>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            Di seguito, verrà mostrato il <span class="font-semibold text-gray-600">report ottenuto dalle misurazioni </span>, utile per strutturare il piano alimentare personalizzato
+            in base agli obiettivi prefissati ad inizio visita.
+          </p>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            Al termine, verranno mostrati esempi di <span class="font-semibold text-gray-600">piani alimentari giornalieri o settimanali</span>, con indicazioni specifiche per ogni paziente,
+            pensati per una gestione equilibrata e salutare in linea con il proprio stile di vita.
+          </p>
+         
+          <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Il piano alimentare e i report delle misurazioni effettuate durante la prima visita e le visite di controllo, verranno inviati 
+            all'email corrispondente <span class="font-semibold text-gray-600">entro 72h.</span>
+          </p>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="bg-white/80 border border-blue-100 rounded-[2rem] px-6 py-10 shadow-md backdrop-blur-sm text-center">
+          <h2 class="font-heading text-2xl font-light text-accent mb-6" style="font-family: 'Merriweather'">
+            Cos'è la Biomipedenziometria?
+          </h2>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            La valutazione della composizione corporea viene effettuata mediante metodiche validate come la
+            <span class="font-semibold text-gray-600">Bioimpedenziometria (BIA)</span>.
+          </p>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            L’esame bioimpedenziometrico è una <span class="font-semibold text-gray-600">metodica sicura e non invasiva </span> che consente di valutare la composizione corporea
+            e lo stato nutrizionale, analizzando massa muscolare, massa grassa e stato di idratazione.
+          </p>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            Viene effettuato tramite strumentazione <span class="font-semibold text-gray-600">BIA certificata (50 kHz monofrequenza) </span> che misura resistenza e reattanza dei tessuti
+            al passaggio di una corrente alternata a bassissima intensità, impercettibile e <span class="font-semibold text-gray-600"> priva di effetti collaterali.</span>
+          </p>
+
+          <p class="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
+            Il test prevede l’applicazione di due elettrodi sul dorso della mano e due sul dorso del piede dello stesso lato del corpo.
+            Il paziente viene posizionato supino per alcuni minuti prima della rilevazione, in un ambiente controllato,
+            così da garantire una <span class="font-semibold text-gray-600">misurazione accurata e affidabile.</span>
+          </p>
+
+          <div class="flex justify-center mt-8">
+            <img src="img/metadieta.png"
+                 alt="Metadieta BIA"
+                 class="w-48 sm:w-60 object-cover rounded-xl">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <h2 class="text-[28px] md:text-[28px] text-accent font-semibold tracking-[0.10em] mt-14 mb-14 text-center"
+        style="font-family: 'Merriweather'">
+      Prima Visita
+    </h2>
+
+    <!-- Step 1 -->
+    <div class="bg-cyan-50 rounded-[2rem] shadow-lg p-8 sm:p-10 mb-12 relative max-w-6xl mx-auto border border-blue-400">
+      <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+        <!-- COLONNA SINISTRA -->
+        <div class="flex-1">
+          <div class="absolute -top-6 left-8 sm:left-10 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+            1
+          </div>
+
+          <h4 class="text-accent font-semibold text-lg mb-4 mt-14" style="font-family: 'Merriweather'">
+            Durata - 60 minuti
+          </h4>
+
+          <ul class="space-y-5 text-gray-700">
+            <li><span class="font-semibold text-gray-600">🔵 Esame obiettivo;</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Valutazione esami ematochimici (ultimi 6 mesi);</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Anamnesi alimentare, fisiologica e patologica;</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Approfondimento questionario compilato;</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Valutazione giornata alimentare tipo;</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Definizione obiettivi personalizzati;</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Valutazione antropometrica e composizione corporea;</span></li>
+            <li><span class="font-semibold text-gray-600">🔵 Elaborazione piano alimentare personalizzato entro 72h.</span></li>
+          </ul>
+        </div>
+
+        <!-- COLONNA DESTRA -->
+        <div class="flex-1 lg:pl-6 mt-8 lg:mt-14">
+          <h4 class="text-accent font-semibold text-lg mb-4" style="font-family: 'Merriweather'">
+            Documento da compilare prima della visita
+          </h4>
+
+          <p class="text-gray-600 font-medium mb-8 leading-relaxed">
+            Per ottimizzare il tempo durante la consulenza, ti invito a scaricare e compilare il seguente documento.
+          </p>
+
+          <div class="space-y-4">
+            <a href="https://forms.gle/agdN8CawQfzMe4tE8"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="block text-primary-700 font-medium hover:underline transition">
+              → Accedi a "Questionario abitudini alimentari"
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-16 flex justify-start">
+        <a href="#contatti"
+           class="w-full sm:w-auto text-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-4 rounded-xl font-semibold transition shadow-md"
+           style="font-family: 'Merriweather'">
+          Prenota prima consulenza
+        </a>
+      </div>
+    </div>
+
+    <h2 class="text-[28px] md:text-[28px] text-accent font-semibold tracking-[0.10em] mt-24 mb-14 text-center"
+        style="font-family: 'Merriweather'">
+      Visita di controllo
+    </h2>
+
+    <!-- Step 2 -->
+<div class="bg-cyan-50 rounded-[2rem] shadow-lg p-8 sm:p-10 mb-12 relative max-w-6xl mx-auto border border-blue-400">
+  <div class="flex flex-col md:flex-row items-center gap-10">
+
+    <!-- TESTO SINISTRA -->
+    <div class="flex-1 w-full">
+      <div class="absolute -top-6 left-8 sm:left-10 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+        2
+      </div>
+
+      <h4 class="text-accent font-semibold text-lg mb-4 mt-14" style="font-family: 'Merriweather'">
+        Durata - 30 minuti
+      </h4>
+
+      <ul class="space-y-5 text-gray-700">
+        <li><span class="font-semibold text-gray-600">🔵 Monitoraggio progressi e misure antropometriche;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Rivalutazione composizione corporea;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Analisi aderenza al piano alimentare;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Discussione difficoltà e dubbi;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Aggiornamento piano nutrizionale (se necessario);</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Ridefinizione obiettivi (se necessario).</span></li>
+      </ul>
+
+      <div class="mt-16 flex justify-start">
+        <a href="#contatti"
+           class="w-full sm:w-auto text-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-4 rounded-xl font-semibold transition shadow-md"
+           style="font-family: 'Merriweather'">
+           Prenota visita di controllo
+        </a>
+      </div>
+    </div>
+
+    <!-- IMMAGINE -->
+    <div class="flex-1 w-full flex items-center justify-center">
+      <div class="w-full max-w-xl">
+        <img src="img/img-misure.jpg"
+             alt="Visita di controllo nutrizionale"
+             class="rounded-2xl shadow-lg w-full h-[320px] sm:h-[460px] object-cover object-center">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h2 class="text-[28px] md:text-[28px] text-accent font-semibold tracking-[0.10em] mt-24 mb-6 text-center"
+    style="font-family: 'Merriweather'">
+  Consulenze online
+</h2>
+
+<p class="max-w-3xl mx-auto text-center text-gray-600 leading-relaxed mb-2 px-6">
+  Disponibile anche per Consulenze online. 
+</p>
+  <p class="mb-2 max-w-3xl mx-auto text-center text-gray-600 leading-relaxed px-6">La prima visita e le visite di controllo
+  possono essere svolte comodamente a distanza tramite piattaforme di videoconsulenza come
+  Google Meet, Skype e Zoom.
+</p>
+ <p class="mb-14 max-w-3xl mx-auto text-center text-gray-600 leading-relaxed px-6">Riceverai lo <span class="font-semibold text-gray-600">stesso supporto personalizzato </span> di una visita in presenza!
+</p>
+
+<div class="bg-cyan-50 rounded-[2rem] p-8 sm:p-12 shadow-lg max-w-6xl mx-auto border border-blue-400 relative">
+  <div class="absolute -top-6 left-8 sm:left-10 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+    3
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center gap-10">
+
+    <!-- Testo -->
+    <div class="flex-1 text-left w-full">
+      <ul class="space-y-4 text-gray-700 mb-10 mt-8 md:mt-0">
+        <li><span class="font-semibold text-gray-600">🔵 Anamnesi alimentare, fisiologica e patologica;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Definizione obiettivi;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Misure antropometriche principali;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Piano alimentare personalizzato;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Valutazione progressi e monitoraggio risultati;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Aggiornamento piano alimentare;</span></li>
+        <li><span class="font-semibold text-gray-600">🔵 Supporto personalizzato in videoconsulenza.</span></li>
+      </ul>
+
+      <div class="mt-16 flex justify-start">
+        <a href="#contatti"
+           class="w-full sm:w-auto text-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-4 rounded-xl font-semibold transition shadow-md"
+           style="font-family: 'Merriweather'">
+           Prenota consulenza online
+        </a>
+      </div>
+    </div>
+
+    <!-- Immagine -->
+    <div class="flex-1 w-full flex items-center justify-center">
+      <div class="w-full max-w-xl">
+        <img src="img/img-online.jpg"
+             alt="Consulenza nutrizionale online"
+             class="rounded-2xl shadow-xl object-cover object-center w-full h-[320px] sm:h-[460px]">
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+</section>
+
+
+
+   
+<!-- CONTATTI SECTION -->
+<section id="contatti" class="py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <span class="inline-block text-accent font-semibold text-3xl tracking-wider uppercase mb-4 font-['Merriweather']">
+        Contatti
+      </span>
+
+      <h2 class="text-text text-sm text-secondary tracking-[0.25em] uppercase mb-6 font-['Merriweather']">
+        Inizia il tuo percorso
+      </h2>
+
+      <p class="text-gray-600 max-w-xl mx-auto">
+        Scrivimi per ricevere informazioni o per prenotare una consulenza.
+        Ti risponderò nel più breve tempo possibile.
+      </p>
+
+      <div class="w-16 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full mt-6"></div>
+    </div>
+
+    <!-- BLOCCO CONTATTI -->
+    <div class="bg-[#E6F0FA] rounded-2xl shadow-md p-10 space-y-10 tracking-[0.03em] font-['Merriweather']">
+
+      <div>
+        <h3 class="text-xl font-semibold text-accent mb-6">
+          Informazioni di contatto
+        </h3>
+        <p class="text-gray-600 text-sm">
+          Puoi contattarmi direttamente tramite questi contatti
+        </p>
+      </div>
+
+      <!-- Contatti -->
+      <div class="space-y-6 text-gray-700">
+
+        <div>
+          <p class="text-xs uppercase tracking-widest text-accent mb-1">
+            E-mail
+          </p>
+          <a href="mailto:a.espositonutrizionista@outlook.it" class="font-bold text-xs hover:underline">
+            a.espositonutrizionista@outlook.it
+          </a>
+        </div>
+
+        <div>
+          <p class="text-xs uppercase tracking-widest text-accent mb-1">
+            Telefono
+          </p>
+          <a href="tel:+393501370145" class="font-bold text-xs hover:underline">
+  +39 350 137 0145</a>
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+   
+<!-- FOOTER SECTION -->
+ 
+<footer class="bg-text text-white py-16">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          
+          <span class="font-heading text-lg font-semibold">
+            Dott. Antonio Esposito, Biologo Nutrizionista
+          </span>
+        </div>
+
+        <p class="text-primary-200 text-sm leading-relaxed">
+          Percorsi nutrizionali personalizzati
+          basati su evidenze scientifiche per migliorare salute,
+          composizione corporea e benessere.
+        </p>
+      </div>
+
+      <!-- Contatti -->
+      <div>
+        <h4 class="font-semibold mb-6 uppercase tracking-wider text-sm text-primary-300">
+          Contatti
+        </h4>
+
+        <div class="space-y-3 text-primary-200 text-sm">
+          <p>E-mail: 
+            <a href="mailto:a.espositonutrizionista@outlook.it" class="hover:text-white transition">
+              a.espositonutrizionista@outlook.it
+            </a>
+          </p>
+
+          <p>Tel: 
+            <a href="tel:+393501370145" class="hover:text-white transition">
+              +39 350 137 0145
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="font-semibold mb-6 uppercase tracking-wider text-sm text-primary-300">
+          Informazioni legali
+        </h4>
+
+        <div class="space-y-3 text-primary-200 text-sm">
+          <p>P.IVA: 02507380562</p>
+
+          
+           
+          <a href="https://www.fnob.it/servizi/elenco-iscritti/" class="block hover:text-white transition">
+            Iscrizione FNOB n° 101749
+          </a>
+ 
+
+          <a href="privacy-policy.html" class="block hover:text-white transition">
+            Privacy Policy
+          </a>
+
+          <a href="cookie-policy.html" class="block hover:text-white transition">
+            Cookie Policy
+          </a>
+
+          
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-primary-700 pt-6 text-center text-primary-300 text-sm">
+      <span id="year"> © 2026 Dott. Antonio Esposito, Biologo Nutrizionista - Tutti i diritti riservati</span> 
+    </div>
+
+  </div>
+</footer>
+
+  
+
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      doctor_name: 'Dott. Antonio Esposito',
+      doctor_title: 'Biologo Nutrizionista',
+      hero_tagline: 'La nutrizione è il primo passo verso il benessere. Ti accompagno in un percorso personalizzato per raggiungere i tuoi obiettivi di salute.',
+      email: 'a.espositonutrizionista@outlook.it',
+      phone: '+39 350 137 0145',
+      background_color: '#ffffff',
+      surface_color: '#f8fafc',
+      text_color: '#1e3a5f',
+      primary_color: '#0c87eb',
+      secondary_color: '#64748b'
+    };
+
+    const heroVideo = document.getElementById("heroVideo");
+  heroVideo.addEventListener("loadeddata", () => {
+    heroVideo.classList.remove("opacity-0");
+  });
+
+    //Mobile menu//
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+
+    if (menu.classList.contains("open")) {
+      menu.style.maxHeight = "0px";
+      menu.style.opacity = "0";
+      menu.classList.remove("open");
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      menu.style.opacity = "1";
+      menu.classList.add("open");
+    }
+  }
+
+  function closeMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.style.maxHeight = "0px";
+    menu.style.opacity = "0";
+    menu.classList.remove("open");
+  }
+
+  window.addEventListener("resize", () => {
+    const menu = document.getElementById("mobile-menu");
+    if (window.innerWidth >= 768) {
+      menu.style.maxHeight = "";
+      menu.style.opacity = "";
+      menu.classList.remove("open");
+    } else if (menu.classList.contains("open")) {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+    }
+  });
+
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const successMessage = document.getElementById('success-message');
+      
+      // Show success message
+      successMessage.classList.remove('hidden');
+      form.reset();
+      
+      // Hide after 5 seconds
+      setTimeout(() => {
+        successMessage.classList.add('hidden');
+      }, 5000);
+    });
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const c = { ...defaultConfig, ...config };
+          
+          // Update hero section
+          document.getElementById('hero-name').textContent = c.doctor_name;
+          document.getElementById('hero-title').textContent = c.doctor_title;
+          document.getElementById('hero-tagline').textContent = c.hero_tagline;
+
+
+          
+          
+          // Update navbar
+          const navName = c.doctor_name.split(' ').slice(-1)[0];
+          document.getElementById('nav-name').textContent = 'Dott. ' + navName;
+          
+          // Update footer
+          document.getElementById('footer-name').textContent = c.doctor_name;
+          
+          // Update contact info
+          document.getElementById('contact-email').textContent = c.email;
+          document.getElementById('contact-phone').textContent = c.phone;
+          document.getElementById('contact-address').textContent = c.address;
+          
+          // Update colors
+          document.body.style.backgroundColor = c.background_color;
+          document.querySelectorAll('.bg-surface').forEach(el => {
+            el.style.backgroundColor = c.surface_color;
+          });
+          document.body.style.color = c.text_color;
+        },
+        mapToCapabilities: (config) => {
+          const c = { ...defaultConfig, ...config };
+          return {
+            recolorables: [
+              {
+                get: () => c.background_color,
+                set: (value) => {
+                  c.background_color = value;
+                  window.elementSdk.setConfig({ background_color: value });
+                }
+              },
+              {
+                get: () => c.surface_color,
+                set: (value) => {
+                  c.surface_color = value;
+                  window.elementSdk.setConfig({ surface_color: value });
+                }
+              },
+              {
+                get: () => c.text_color,
+                set: (value) => {
+                  c.text_color = value;
+                  window.elementSdk.setConfig({ text_color: value });
+                }
+              },
+              {
+                get: () => c.primary_color,
+                set: (value) => {
+                  c.primary_color = value;
+                  window.elementSdk.setConfig({ primary_color: value });
+                }
+              },
+              {
+                get: () => c.secondary_color,
+                set: (value) => {
+                  c.secondary_color = value;
+                  window.elementSdk.setConfig({ secondary_color: value });
+                }
+              }
+            ],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined
+          };
+        },
+        mapToEditPanelValues: (config) => {
+          const c = { ...defaultConfig, ...config };
+          return new Map([
+            ['doctor_name', c.doctor_name],
+            ['doctor_title', c.doctor_title],
+            ['hero_tagline', c.hero_tagline],
+            ['email', c.email],
+            ['phone', c.phone],
+            ['address', c.address]
+          ]);
+        }
+      });
+    }
+
+
+    //Carosello//
+
+const slides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
+
+function showSlide(index){
+    slides.forEach((slide,i)=>{
+        slide.style.opacity = i === index ? "1" : "0";
+        slide.style.transform = i === index ? "scale(1)" : "scale(1.05)";
+    });
+}
+
+function nextSlide(){
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide(){
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+let interval = setInterval(nextSlide, 3000);
+
+function resetInterval(){
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 3000);
+}
+
+document.getElementById("nextSlide").addEventListener("click", ()=>{
+    nextSlide();
+    resetInterval();
+});
+
+document.getElementById("prevSlide").addEventListener("click", ()=>{
+    prevSlide();
+    resetInterval();
+});
+
+/* Pause autoplay on hover hero */
+document.getElementById("heroCarousel").addEventListener("mouseenter", ()=>{
+    clearInterval(interval);
+});
+
+document.getElementById("heroCarousel").addEventListener("mouseleave", ()=>{
+    interval = setInterval(nextSlide, 3000);
+});
+
+
+
+ 
+</script>
+</body>
+</html>
